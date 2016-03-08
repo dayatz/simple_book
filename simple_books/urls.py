@@ -22,4 +22,5 @@ router.register(r'books', BookViewSet, base_name='book')
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^auth$', 'rest_framework.authtoken.views.obtain_auth_token')
 ] + router.urls
